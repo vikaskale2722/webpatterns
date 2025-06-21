@@ -20,35 +20,6 @@
   - Searchable company metadata (`extracted.json`).
   - Parameter descriptions and usage tips.
 
----
-
-## Project Structure
-backend/
-├── main.py # FastAPI server
-├── services/
-│ ├── feature_service.py # Feature generation logic
-│ └── clustering_service.py # Clustering logic
-├── data/
-│ ├── features/ # Generated feature CSVs
-│ ├── clusters/ # Clustering results and metrics
-│ └── cleaned/ # Preprocessed input CSV
-└── models/ # Request schemas
-
-frontend/
-├── src/
-│ ├── App.js # Main layout and logic
-│ ├── api.js # Axios backend communication
-│ ├── components/
-│ │ ├── Sidebar.jsx
-│ │ ├── ClusterPlot.jsx
-│ │ ├── ClusterSummaryTable.jsx
-│ │ ├── LoadingSpinner.jsx
-│ │ └── HelpPanel.jsx
-│ ├── data/
-│ │ ├── kodes.json # WZ code mappings
-│ │ └── extracted.json # Company metadata
-└── public/
-
 
 ---
 
