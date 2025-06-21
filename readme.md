@@ -1,0 +1,82 @@
+# WebPatterns: An Interactive Dashboard for Website Text Clustering
+
+**WebPatterns** is an interactive web application for clustering and visualizing German company websites based on their textual content. It enables exploratory analysis of business sectors using modern NLP techniques and clustering algorithms.
+
+---
+
+## Features
+
+- **Preprocessed Website Content**: Texts extracted from company websites.
+- **Feature Generation**: Supports TF-IDF, SBERT, and Word2Vec (FastText pretrained).
+- **Clustering**: Choose between K-Means and DBSCAN.
+- **Visualization**: UMAP-based 2D cluster plots with tooltips and cluster labeling.
+- **Interactive Exploration**:
+  - Hover to view company details.
+  - Click to inspect full metadata.
+  - Scrollable cluster summary.
+- **Help Section**:
+  - Project overview and usage guide.
+  - Searchable WZ code descriptions (`kodes.json`).
+  - Searchable company metadata (`extracted.json`).
+  - Parameter descriptions and usage tips.
+
+---
+
+## Project Structure
+backend/
+├── main.py # FastAPI server
+├── services/
+│ ├── feature_service.py # Feature generation logic
+│ └── clustering_service.py # Clustering logic
+├── data/
+│ ├── features/ # Generated feature CSVs
+│ ├── clusters/ # Clustering results and metrics
+│ └── cleaned/ # Preprocessed input CSV
+└── models/ # Request schemas
+
+frontend/
+├── src/
+│ ├── App.js # Main layout and logic
+│ ├── api.js # Axios backend communication
+│ ├── components/
+│ │ ├── Sidebar.jsx
+│ │ ├── ClusterPlot.jsx
+│ │ ├── ClusterSummaryTable.jsx
+│ │ ├── LoadingSpinner.jsx
+│ │ └── HelpPanel.jsx
+│ ├── data/
+│ │ ├── kodes.json # WZ code mappings
+│ │ └── extracted.json # Company metadata
+└── public/
+
+
+---
+
+## Technologies Used                              
+
+ Frontend -   React, Plotly.js, Tailwind CSS         
+ Backend -    FastAPI (Python)                       
+ NLP Models - TF-IDF, SBERT, Word2Vec (FastText)     
+ Clustering - K-Means, DBSCAN                        
+ Visualization - UMAP                            
+
+---
+
+## How to Use
+
+
+### Backend (FastAPI)
+
+bash
+run install.bat
+cd backend
+python -m venv .venv
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+### Frontend (ReactJS)
+cd frontend
+npm install
+npm run dev
+
