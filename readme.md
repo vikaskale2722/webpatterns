@@ -67,16 +67,15 @@ frontend/
 
 ### Backend (FastAPI)
 
-bash
-run install.bat
-cd backend
-python -m venv .venv
-source .venv/bin/activate  # or .venv\Scripts\activate on Windows
-pip install -r requirements.txt
-uvicorn main:app --reload
+1. bash
+2. cd backend
+3. python -m venv .venv
+4. source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+5. pip install -r requirements.txt
+6. uvicorn main:app --reload
 
 ### Frontend (ReactJS)
-cd frontend
-npm install
-npm run dev
+1. cd frontend
+2. npm install
+3. npm run dev
 
