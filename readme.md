@@ -50,3 +50,7 @@
 2. npm install
 3. npm start
 
+### Notes
+
+Please add the raw data in the specified directory
+
