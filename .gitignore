@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+.vscode/
+.git/
+
+# python cache
+backend/__pycache__/
+
+# Data (cache, models, features, clusters, etc.)
+data/
+docs/
+
+
+#Frontend
+my-project/node_modules
+my-project/package-lock.json
