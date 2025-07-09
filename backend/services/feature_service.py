@@ -99,7 +99,7 @@ def generate_word2vec_features(req: Word2VecRequest):
 
     model_path = project_root / "data/models/cc.de.300.bin"
     if not model_path.exists():
-        print("🔽 Downloading FastText model...")
+        print("Downloading FastText model...")
         gz_path = model_path.with_suffix(".bin.gz")
         url = "https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.de.300.bin.gz"
         urllib.request.urlretrieve(url, gz_path)
